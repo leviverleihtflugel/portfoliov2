@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import {
-  SiJavascript, SiTypescript, SiMongodb, SiNodedotjs, SiExpress,
+  SiJavascript, SiTypescript, SiNodedotjs, SiExpress,
   SiCplusplus, SiPython, SiFirebase, SiFlutter, SiPostgresql,
   SiHtml5, SiCss3, SiReact, SiDart, SiPhp, SiGithub
 } from "react-icons/si";
@@ -11,7 +11,14 @@ import { TbApi } from "react-icons/tb";
 import { LuPalette } from "react-icons/lu";
 import { FaServer } from "react-icons/fa6";
 
-const skills = {
+// 👇 JSX tipi için React import edildi
+interface Skill {
+  icon: React.ReactNode | React.ReactNode[];
+  title: string;
+  desc: string;
+}
+
+const skills: Record<string, Skill[]> = {
   Frontend: [
     {
       icon: [<SiHtml5 key="html" />, <SiCss3 key="css" />],
@@ -107,7 +114,7 @@ const tabs = [
 ];
 
 export default function Skills() {
-  const [active, setActive] = useState("Frontend");
+  const [active, setActive] = useState<string>("Frontend");
 
   return (
     <motion.div
@@ -120,7 +127,6 @@ export default function Skills() {
     >
       <div>
         <span className="section-heading"><span className="gradient">Yeteneklerim</span></span>
-        
 
         <div className="skills-tabs">
           {tabs.map(({ label, icon }) => (

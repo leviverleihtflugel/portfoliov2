@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <Navigation handleDownloadAndView={handleDownloadAndView} />
+      <Navigation />
 
       <div className="greeting-bg-wrap">
         <Squares
