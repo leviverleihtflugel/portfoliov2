@@ -125,7 +125,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/customer-support-agent"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/DatabaseManagmentSystems-Kedi_Hastanesi.gif"
                     title="Kedi Hastanesi DBMS"
                     description="Veteriner kliniği için veritabanı yönetim sistemi."
                     
