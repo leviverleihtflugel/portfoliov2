@@ -161,7 +161,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/PolicyGPT"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/VoiceGPT.jpg"
                     title="VoiceGPT"
                     description="Türkçe sesli asistan. Whisper + Llama3 + gTTS tabanlı."
                     
