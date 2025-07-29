@@ -107,7 +107,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/farmer_market"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/riotappv2.jpg"
                     title="RiotApp V2"
                     description="League of Legends oyuncu istatistiklerini gösteren mobil uygulama."
                     
