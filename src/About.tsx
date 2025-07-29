@@ -59,12 +59,12 @@ function AboutMe() {
                         <span className="About-para-title">
                             <IoGameController id="about-icon" /> <span className="gradient"> İlgi Alanlarım </span>
                         </span>
-                        <span className="About-paragraph-text">
-                            Yeni teknolojileri keşfetmek, üretkenlik araçları geliştirmek ve açık kaynak topluluklarına katkı sağlamak beni motive ediyor.
-                            <br /><br />
-                            Kullanıcı deneyimi odaklı yazılımlar üretmek, sezgisel arayüzler tasarlamak ve yazılım mimarilerini araştırmak en çok ilgilendiğim alanlar arasında.
-                            <br /><br />
-                            Özellikle Flutter, React, Node.js ve Firebase ile üretim yapmaktan büyük keyif alıyorum. Aynı zamanda yazılımın sadece koddan ibaret olmadığını düşünüyor; düzenli, okunabilir ve sürdürülebilir kod yazımına özen gösteriyorum.
+                        <span className="About-paragraph-text">               
+							Yeni teknolojileri keşfetmek, kullanıcı odaklı yazılımlar geliştirmek en büyük motivasyon kaynaklarım arasında. Özellikle mobil ve web platformlarında sezgisel arayüzler ve üretken sistemler geliştirmeye ilgi duyuyorum.
+							<br /><br />	
+							Mobil ve Web Geliştirme alanında Flutter ve React teknolojileriyle çapraz platform uygulamalar geliştiriyorum. Firebase gibi modern arka uç servislerini aktif olarak projelerimde kullanıyor, gerçek zamanlı veri yönetimi, kullanıcı kimlik doğrulama ve bulut tabanlı çözümler geliştiriyorum.
+							<br /><br />	
+							Yapay Zeka ve Doğal Dil İşleme konusunda LLM (Llama3, Ollama) tabanlı destek araçları, metin tabanlı bilgi sistemleri gibi konularla ilgileniyorum. Python ve Streamlit ile etkileşimli yapay zekâ uygulamaları geliştiriyorum.
                         </span>
                     </div>
 
