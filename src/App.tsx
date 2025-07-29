@@ -7,7 +7,6 @@ import Contact from './Contact';
 import Footer from './Footer';
 import BackToTop from './BackToTop';
 import Squares from './Squares.tsx';
-import { Analytics } from "@vercel/analytics/react";
 
 declare global {
   interface Window {
@@ -59,7 +58,6 @@ function App() {
       <BackToTop />
       <Contact />
       <Footer />
-      <Analytics />
     </>
   );
 }
