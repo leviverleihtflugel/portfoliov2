@@ -2,6 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { HiArrowDown, HiDownload } from "react-icons/hi";
+
 import GradientText from './GradientText.tsx';
 
 type Props = {
@@ -10,21 +11,21 @@ type Props = {
 
 const Greeting = ({ handleDownloadAndView }: Props) => {
   return (
-    <div className="greeting min-h-screen flex flex-col items-center justify-center px-4 text-center" id="top">
-      <div className="greeting-container max-w-3xl w-full">
-        <h1 className="text-3xl sm:text-5xl font-bold mb-4 leading-snug" id="fade-in">
+    <div className="greeting" id="top">
+      <div className="greeting-container">
+        <span className="greeting-title" id="fade-in">
           Merhaba, ben&nbsp;
           <GradientText
             colors={["#e66465", "#9198e5", "#e66465", "#9198e5"]}
             animationSpeed={4}
             showBorder={false}
-            className="inline"
+            className="greeting-title"
           >
             Ömer Faruk Aydın
           </GradientText>
-        </h1>
+        </span>
 
-        <div className="text-lg sm:text-xl mb-6 text-gray-300" id="fade-in2">
+        <div id="fade-in2">
           <TypeAnimation
             className="greeting-subtitle"
             sequence={[
@@ -41,39 +42,73 @@ const Greeting = ({ handleDownloadAndView }: Props) => {
           />
         </div>
 
-        <div className="socials flex flex-col sm:flex-row items-center justify-center gap-4 mb-8" id="fade-in3">
-          <button
-            onClick={handleDownloadAndView}
-            className="flex items-center gap-2 px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md"
-          >
-            <HiDownload className="text-lg" />
-            CV'mi Görüntüle
-          </button>
+        
+        <div className="socials" id="fade-in3">
+          <span className="resume" onClick={handleDownloadAndView}>
+            <div className="social-item">
+              <HiDownload
+                style={{
+                  fontSize: '20px',
+                  marginRight: '10px',
+                  verticalAlign: 'center',
+                  color: 'white',
+                }}
+              />
+              <span>CV'mi Görüntüle</span>
+            </div>
+          </span>
 
-          <div className="flex gap-4">
-            <a
-              href="https://www.linkedin.com/in/omeraydın"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#0077b5]"
-            >
-              <IoLogoLinkedin className="text-2xl sm:text-3xl" />
-            </a>
-            <a
-              href="https://github.com/leviverleihtflugel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-gray-400"
-            >
-              <LuGithub className="text-2xl sm:text-3xl" />
-            </a>
+          <div className="social-item">
+            <span className="social-icon">
+              <a
+                href="https://www.linkedin.com/in/omeraydın"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IoLogoLinkedin
+                  id="socialHover"
+                  style={{
+                    fontSize: '30px',
+                    margin: '10px',
+                    verticalAlign: 'center',
+                  }}
+                />
+              </a>
+            </span>
+          </div>
+
+          <div className="social-item">
+            <span className="social-icon">
+              <a
+                href="https://github.com/leviverleihtflugel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LuGithub
+                  id="socialHover"
+                  style={{
+                    fontSize: '30px',
+                    margin: '10px',
+                    verticalAlign: 'center',
+                  }}
+                />
+              </a>
+            </span>
           </div>
         </div>
 
-        <div className="scroll-down-container mt-4">
-          <a className="scroll-down flex flex-col items-center text-sm text-pink-300 hover:text-pink-400 transition" href="#about">
+        <div className="scroll-down-container">
+          <a className="scroll-down" href="#about">
             <span className="gradient">Aşağı kaydır veya tıkla</span>
-            <HiArrowDown className="text-2xl mt-1 animate-bounce" />
+            <HiArrowDown
+              style={{
+                display: 'flex',
+                fontSize: '30px',
+                margin: '10px',
+                justifyContent: 'center',
+                verticalAlign: 'center',
+              }}
+            />
           </a>
         </div>
       </div>
