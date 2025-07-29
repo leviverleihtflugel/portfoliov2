@@ -1,24 +1,35 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-
-import {
-  SiJavascript, SiTypescript, SiNodedotjs, SiExpress,
-  SiCplusplus, SiPython, SiFirebase, SiFlutter, SiPostgresql,
-  SiHtml5, SiCss3, SiReact, SiDart, SiPhp, SiGithub
-} from "react-icons/si";
-import { FaFigma } from "react-icons/fa";
-import { TbApi } from "react-icons/tb";
+import React from "react";
+import { FaFigma, FaServer } from "react-icons/fa";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { LuPalette } from "react-icons/lu";
-import { FaServer } from "react-icons/fa6";
+import { TbApi } from "react-icons/tb";
+import {
+  SiFlutter,
+  SiDart,
+  SiPostgresql,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiExpress,
+  SiFirebase,
+  SiPhp,
+  SiCplusplus,
+  SiGithub,
+  SiPython
+} from "react-icons/si";
 
-// 👇 JSX tipi için React import edildi
+type SkillCategory = "Frontend" | "Backend" | "Diğer";
+
 interface Skill {
-  icon: React.ReactNode | React.ReactNode[];
+  icon: React.ReactNode;
   title: string;
   desc: string;
 }
 
-const skills: Record<string, Skill[]> = {
+const skills: Record<SkillCategory, Skill[]> = {
   Frontend: [
     {
       icon: [<SiHtml5 key="html" />, <SiCss3 key="css" />],
@@ -53,11 +64,7 @@ const skills: Record<string, Skill[]> = {
   ],
   Backend: [
     {
-      icon: <SiNodedotjs />,
-      title: "Node.js",
-      desc: "Sunucu taraflı uygulama geliştirme ortamı."
-    },
-    {
+      // icon: <SiNodedotjs />,
       icon: <SiExpress />,
       title: "Express.js",
       desc: "API ve middleware tabanlı web sunucu mimarisi."
@@ -107,14 +114,14 @@ const skills: Record<string, Skill[]> = {
   ]
 };
 
-const tabs = [
+const tabs: { label: SkillCategory; icon: React.ReactNode }[] = [
   { label: "Frontend", icon: <LuPalette style={{ marginRight: 10 }} /> },
   { label: "Backend", icon: <FaServer style={{ marginRight: 10 }} /> },
   { label: "Diğer", icon: <TbApi style={{ marginRight: 10 }} /> }
 ];
 
 export default function Skills() {
-  const [active, setActive] = useState<string>("Frontend");
+  const [active, setActive] = useState<SkillCategory>("Frontend");
 
   return (
     <motion.div
@@ -126,7 +133,9 @@ export default function Skills() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div>
-        <span className="section-heading"><span className="gradient">Yeteneklerim</span></span>
+        <span className="section-heading">
+          <span className="gradient">Yeteneklerim</span>
+        </span>
 
         <div className="skills-tabs">
           {tabs.map(({ label, icon }) => (
@@ -135,7 +144,8 @@ export default function Skills() {
               className={active === label ? "active" : ""}
               onClick={() => setActive(label)}
             >
-              {icon}{label}
+              {icon}
+              {label}
             </button>
           ))}
         </div>
@@ -145,7 +155,11 @@ export default function Skills() {
             <div className="skill-item" key={index}>
               <div className="skill-sub-item">
                 {Array.isArray(skill.icon)
-                  ? skill.icon.map((i, idx) => <span key={idx} className="skill-icon">{i}</span>)
+                  ? skill.icon.map((i, idx) => (
+                      <span key={idx} className="skill-icon">
+                        {i}
+                      </span>
+                    ))
                   : <span className="skill-icon">{skill.icon}</span>}
                 <span className="skills-title">{skill.title}</span>
               </div>
