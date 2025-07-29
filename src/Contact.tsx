@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { IoMail, IoSend } from "react-icons/io5";
 import { motion } from "motion/react";
 
 function Contact() {
@@ -21,16 +20,14 @@ function Contact() {
                     </span>
 
                     <div className="icons">
-                        <a className="icon" type="text" href="https://www.linkedin.com/in/omeraydın" target="_blank" rel="noopener noreferrer">
+                        <a className="icon" href="https://www.linkedin.com/in/omeraydın" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin />
                         </a>
-                        <a className="icon" type="email" href="https://github.com/leviverleihtflugel" target="_blank" rel="noopener noreferrer">
+                        <a className="icon" href="https://github.com/leviverleihtflugel" target="_blank" rel="noopener noreferrer">
                             <FaGithub />
                         </a>     
                     </div>
                 </div>
-
-                
             </div>
         </motion.div>
     );

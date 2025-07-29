@@ -1,20 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import 'react-tooltip/dist/react-tooltip.css'
-
 import { GrProjects } from "react-icons/gr";
 import { GoPerson } from 'react-icons/go';
 import { MdEmail } from "react-icons/md";
 import { HiHome } from "react-icons/hi";
-import { GiSkills } from "react-icons/gi"; // yeni ikon
+import { GiSkills } from "react-icons/gi";
 import Hamburger from 'hamburger-react';
 
-type props = { 
-    handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
-};
-
-function Navigation({ handleDownloadAndView }: props) {
+function Navigation() {
     const [isOpen, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -29,7 +22,6 @@ function Navigation({ handleDownloadAndView }: props) {
 
     return (
         <div id="fade-in3" className={`navigation ${scrolled ? 'scrolled' : ''}`}>
-
             <div className="nav-item">
                 <div className="nav-menu">
                     <span className="nav-title">
