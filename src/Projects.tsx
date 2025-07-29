@@ -98,7 +98,7 @@ function Projects() {
             <span className="section-sub-heading">Farklı alanlarda geliştirdiğim projeler sayesinde Mobil, Web ve Yapay Zeka teknolojilerinde kapsamlı bir deneyim kazandım. Kullanıcı arayüzünden veritabanı yönetimine kadar uçtan uca yazılım çözümleri geliştiriyor, her aşamada modern teknolojilerle üretken çözümler sunuyorum.</span>
             <div className="project-container">
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="Farmer Market"
                     description="Çiftçilerle tüketicileri buluşturan rol tabanlı mobil pazar uygulaması."
                     
@@ -107,7 +107,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/farmer_market"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="RiotApp V2"
                     description="League of Legends oyuncu istatistiklerini gösteren mobil uygulama."
                     
@@ -116,7 +116,7 @@ function Projects() {
                     github="https://github.com/leviSEC/riotappv2"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="Customer Support Agent"
                     description="Llama3 destekli müşteri destek yapay zekâ asistanı."
                     
@@ -125,7 +125,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/customer-support-agent"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="Kedi Hastanesi DBMS"
                     description="Veteriner kliniği için veritabanı yönetim sistemi."
                     
@@ -134,7 +134,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="İnternet Hız Testi"
                     description="İnternet hızını ölçen basit web aracı."
                  
@@ -143,7 +143,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/Internet-Speed-Test"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="Şifre Üreteci"
                     description="Güçlü ve rastgele şifreler oluşturan uygulama."
                    
@@ -152,7 +152,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/Password-Generator"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="PolicyGPT"
                     description="Vatandaşlık ve resmi işlemleri açıklayan LLM tabanlı chatbot."
                     
@@ -161,7 +161,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/PolicyGPT"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src=""
                     title="VoiceGPT"
                     description="Türkçe sesli asistan. Whisper + Llama3 + gTTS tabanlı."
                     
