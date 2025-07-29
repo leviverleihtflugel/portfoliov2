@@ -152,7 +152,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/Password-Generator"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/PolicyGPT.jpg"
                     title="PolicyGPT"
                     description="Vatandaşlık ve resmi işlemleri açıklayan LLM tabanlı chatbot."
                     
