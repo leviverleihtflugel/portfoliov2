@@ -143,7 +143,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/Internet-Speed-Test"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/Password-Generator.jpg"
                     title="Şifre Üreteci"
                     description="Güçlü ve rastgele şifreler oluşturan uygulama."
                    
