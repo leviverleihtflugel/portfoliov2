@@ -1,7 +1,6 @@
-import React from "react";
-import { FaFigma, FaServer } from "react-icons/fa";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaFigma, FaServer } from "react-icons/fa";
 import { LuPalette } from "react-icons/lu";
 import { TbApi } from "react-icons/tb";
 import {
@@ -64,7 +63,6 @@ const skills: Record<SkillCategory, Skill[]> = {
   ],
   Backend: [
     {
-      // icon: <SiNodedotjs />,
       icon: <SiExpress />,
       title: "Express.js",
       desc: "API ve middleware tabanlı web sunucu mimarisi."
@@ -115,9 +113,9 @@ const skills: Record<SkillCategory, Skill[]> = {
 };
 
 const tabs: { label: SkillCategory; icon: React.ReactNode }[] = [
-  { label: "Frontend", icon: <LuPalette style={{ marginRight: 10 }} /> },
-  { label: "Backend", icon: <FaServer style={{ marginRight: 10 }} /> },
-  { label: "Diğer", icon: <TbApi style={{ marginRight: 10 }} /> }
+  { label: "Frontend", icon: <LuPalette /> },
+  { label: "Backend", icon: <FaServer /> },
+  { label: "Diğer", icon: <TbApi /> }
 ];
 
 export default function Skills() {
@@ -125,45 +123,51 @@ export default function Skills() {
 
   return (
     <motion.div
-      className="skills"
       id="skills"
+      className="py-12 px-4 sm:px-8 text-white"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div>
-        <span className="section-heading">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           <span className="gradient">Yeteneklerim</span>
-        </span>
+        </h2>
 
-        <div className="skills-tabs">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {tabs.map(({ label, icon }) => (
             <button
               key={label}
-              className={active === label ? "active" : ""}
               onClick={() => setActive(label)}
+              className={`flex items-center gap-2 px-4 py-2 border rounded-full transition ${
+                active === label
+                  ? "bg-pink-600 text-white"
+                  : "bg-transparent text-white border-gray-600 hover:bg-pink-800 hover:text-white"
+              }`}
             >
-              {icon}
-              {label}
+              {icon} {label}
             </button>
           ))}
         </div>
 
-        <div className="skills-container">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {skills[active].map((skill, index) => (
-            <div className="skill-item" key={index}>
-              <div className="skill-sub-item">
+            <div
+              key={index}
+              className="bg-[#121212] border border-gray-700 rounded-lg p-5 text-left"
+            >
+              <div className="flex items-center gap-3 mb-2">
                 {Array.isArray(skill.icon)
                   ? skill.icon.map((i, idx) => (
-                      <span key={idx} className="skill-icon">
+                      <span key={idx} className="text-xl">
                         {i}
                       </span>
                     ))
-                  : <span className="skill-icon">{skill.icon}</span>}
-                <span className="skills-title">{skill.title}</span>
+                  : <span className="text-xl">{skill.icon}</span>}
+                <h3 className="text-lg font-semibold">{skill.title}</h3>
               </div>
-              <div className="skill-description">{skill.desc}</div>
+              <p className="text-sm text-gray-300">{skill.desc}</p>
             </div>
           ))}
         </div>
