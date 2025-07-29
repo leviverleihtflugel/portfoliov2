@@ -33,7 +33,7 @@ function App() {
     }
     const link = document.createElement('a');
     link.href = '/Ömer Faruk Aydın CV- EN .pdf';
-    link.download = '/Ömer Faruk Aydın CV- EN .pdf';
+    link.download = 'Ömer Faruk Aydın CV- EN .pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -42,17 +42,15 @@ function App() {
   return (
     <>
       <Navigation />
-
       <div className="greeting-bg-wrap">
         <Squares
           speed={0.5}
           squareSize={40}
-          direction='diagonal'
-          borderColor='#5f5959ff'
+          direction="diagonal"
+          borderColor="#5f5959ff"
         />
         <Greeting handleDownloadAndView={handleDownloadAndView} />
       </div>
-
       <AboutMe />
       <Skills />
       <Projects />
