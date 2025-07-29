@@ -21,10 +21,8 @@ import {
   SiPython
 } from "react-icons/si";
 
-import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-
-import "./Skills.css";
+import "react-tooltip/dist/react-tooltip.css";
 
 type SkillCategory = "Frontend" | "Backend" | "Diğer";
 
@@ -140,6 +138,9 @@ export default function Skills() {
         <span className="section-heading">
           <span className="gradient">Yeteneklerim</span>
         </span>
+        <span className="section-sub-heading">
+          Geliştirme süreçlerinde kullandığım modern teknolojiler
+        </span>
 
         <div className="skills-tabs">
           {tabs.map(({ label, icon }) => (
@@ -154,18 +155,20 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="skill-card-container">
+        <div className="skills-container">
           {skills[active].map((skill, index) => (
-            <div className="skill-card" key={index}>
-              <div className="skill-icon-container">
+            <div className="skill-item" key={index}>
+              <div className="skill-sub-item">
                 {Array.isArray(skill.icon)
                   ? skill.icon.map((i, idx) => (
-                      <span key={idx} className="skill-icon">{i}</span>
+                      <span key={idx} className="skill-icon">
+                        {i}
+                      </span>
                     ))
                   : <span className="skill-icon">{skill.icon}</span>}
+                <span className="skills-title">{skill.title}</span>
               </div>
-              <span className="skill-title gradient">{skill.title}</span>
-              <p className="skill-desc">{skill.desc}</p>
+              <div className="skill-description">{skill.desc}</div>
             </div>
           ))}
         </div>
