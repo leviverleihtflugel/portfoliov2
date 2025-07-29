@@ -1,13 +1,30 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
+import React from "react";
 import { FaFigma, FaServer } from "react-icons/fa";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { LuPalette } from "react-icons/lu";
 import { TbApi } from "react-icons/tb";
 import {
-  SiFlutter, SiDart, SiPostgresql, SiHtml5, SiCss3,
-  SiJavascript, SiTypescript, SiReact, SiExpress,
-  SiFirebase, SiPhp, SiCplusplus, SiGithub, SiPython
+  SiFlutter,
+  SiDart,
+  SiPostgresql,
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiExpress,
+  SiFirebase,
+  SiPhp,
+  SiCplusplus,
+  SiGithub,
+  SiPython
 } from "react-icons/si";
+
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
+
+import "./Skills.css";
 
 type SkillCategory = "Frontend" | "Backend" | "Diğer";
 
@@ -102,9 +119,9 @@ const skills: Record<SkillCategory, Skill[]> = {
 };
 
 const tabs: { label: SkillCategory; icon: React.ReactNode }[] = [
-  { label: "Frontend", icon: <LuPalette /> },
-  { label: "Backend", icon: <FaServer /> },
-  { label: "Diğer", icon: <TbApi /> }
+  { label: "Frontend", icon: <LuPalette style={{ marginRight: 10 }} /> },
+  { label: "Backend", icon: <FaServer style={{ marginRight: 10 }} /> },
+  { label: "Diğer", icon: <TbApi style={{ marginRight: 10 }} /> }
 ];
 
 export default function Skills() {
@@ -112,28 +129,24 @@ export default function Skills() {
 
   return (
     <motion.div
+      className="skills"
       id="skills"
-      className="skills-section py-12 px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+      <div>
+        <span className="section-heading">
           <span className="gradient">Yeteneklerim</span>
-        </h2>
+        </span>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="skills-tabs">
           {tabs.map(({ label, icon }) => (
             <button
               key={label}
+              className={active === label ? "active" : ""}
               onClick={() => setActive(label)}
-              className={`flex items-center gap-2 px-4 py-2 border rounded-full text-sm sm:text-base transition ${
-                active === label
-                  ? "bg-pink-600 text-white"
-                  : "bg-transparent text-white border-gray-600 hover:bg-pink-700"
-              }`}
             >
               {icon}
               {label}
@@ -141,21 +154,18 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="skill-card-container">
           {skills[active].map((skill, index) => (
-            <div
-              key={index}
-              className="bg-[#121212] border border-gray-700 rounded-lg p-5 text-left shadow-md w-full"
-            >
-              <div className="flex flex-wrap items-center gap-2 mb-2">
+            <div className="skill-card" key={index}>
+              <div className="skill-icon-container">
                 {Array.isArray(skill.icon)
                   ? skill.icon.map((i, idx) => (
-                      <span key={idx} className="text-lg sm:text-xl">{i}</span>
+                      <span key={idx} className="skill-icon">{i}</span>
                     ))
-                  : <span className="text-lg sm:text-xl">{skill.icon}</span>}
-                <h3 className="text-md sm:text-lg font-semibold">{skill.title}</h3>
+                  : <span className="skill-icon">{skill.icon}</span>}
               </div>
-              <p className="text-sm text-gray-300">{skill.desc}</p>
+              <span className="skill-title gradient">{skill.title}</span>
+              <p className="skill-desc">{skill.desc}</p>
             </div>
           ))}
         </div>
