@@ -98,7 +98,7 @@ function Projects() {
             <span className="section-sub-heading">Farklı alanlarda geliştirdiğim projeler sayesinde Mobil, Web ve Yapay Zeka teknolojilerinde kapsamlı bir deneyim kazandım. Kullanıcı arayüzünden veritabanı yönetimine kadar uçtan uca yazılım çözümleri geliştiriyor, her aşamada modern teknolojilerle üretken çözümler sunuyorum.</span>
             <div className="project-container">
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/farmermarket.jpg"
                     title="Farmer Market"
                     description="Çiftçilerle tüketicileri buluşturan rol tabanlı mobil pazar uygulaması."
                     
