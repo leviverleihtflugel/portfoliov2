@@ -21,9 +21,6 @@ import {
   SiPython
 } from "react-icons/si";
 
-import { Tooltip as ReactTooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
-
 type SkillCategory = "Frontend" | "Backend" | "Diğer";
 
 interface Skill {
@@ -67,6 +64,7 @@ const skills: Record<SkillCategory, Skill[]> = {
   ],
   Backend: [
     {
+      // icon: <SiNodedotjs />,
       icon: <SiExpress />,
       title: "Express.js",
       desc: "API ve middleware tabanlı web sunucu mimarisi."
@@ -137,9 +135,6 @@ export default function Skills() {
       <div>
         <span className="section-heading">
           <span className="gradient">Yeteneklerim</span>
-        </span>
-        <span className="section-sub-heading">
-          Geliştirme süreçlerinde kullandığım modern teknolojiler
         </span>
 
         <div className="skills-tabs">
