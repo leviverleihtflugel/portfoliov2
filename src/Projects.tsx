@@ -116,7 +116,7 @@ function Projects() {
                     github="https://github.com/leviSEC/riotappv2"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/customer-support-agent.jpg"
                     title="Customer Support Agent"
                     description="Llama3 destekli müşteri destek yapay zekâ asistanı."
                     
