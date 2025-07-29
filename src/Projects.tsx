@@ -98,75 +98,75 @@ function Projects() {
             <span className="section-sub-heading">Farklı alanlarda geliştirdiğim projeler sayesinde Mobil, Web ve Yapay Zeka teknolojilerinde kapsamlı bir deneyim kazandım. Kullanıcı arayüzünden veritabanı yönetimine kadar uçtan uca yazılım çözümleri geliştiriyor, her aşamada modern teknolojilerle üretken çözümler sunuyorum.</span>
             <div className="project-container">
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="Farmer Market"
                     description="Çiftçilerle tüketicileri buluşturan rol tabanlı mobil pazar uygulaması."
                     
                     tags={[{ icon: <SiFlutter />, name: "Flutter" }, { icon: <SiDart />, name: "Dart" }, { icon: <SiMongodb />, name: "Firebase" }]}
-                    
+                    link="https://github.com/leviverleihtflugel/farmer_market"
                     github="https://github.com/leviverleihtflugel/farmer_market"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="RiotApp V2"
                     description="League of Legends oyuncu istatistiklerini gösteren mobil uygulama."
                     
                     tags={[{ icon: <SiFlutter />, name: "Flutter" }, { icon: <SiDart />, name: "Dart" }, { icon: <SiRiotgames />, name: "Riot API" }]}
-                    
+                    link="https://github.com/leviSEC/riotappv2"
                     github="https://github.com/leviSEC/riotappv2"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="Customer Support Agent"
                     description="Llama3 destekli müşteri destek yapay zekâ asistanı."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }, { icon: <SiStreamlit />, name: "Streamlit" }]}
-                    
+                    link="https://github.com/leviverleihtflugel/customer-support-agent"
                     github="https://github.com/leviverleihtflugel/customer-support-agent"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="Kedi Hastanesi DBMS"
                     description="Veteriner kliniği için veritabanı yönetim sistemi."
                     
                     tags={[{ icon: <FaJs />, name: "JavaScript" }, { icon: <FaNodeJs />, name: "Node.js" }, { icon: <SiPostgresql />, name: "PostgreSQL" }]}
-                    
+                    link="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
                     github="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="İnternet Hız Testi"
                     description="İnternet hızını ölçen basit web aracı."
                  
                     tags={[{ icon: <SiJavascript />, name: "JavaScript" }, { icon: <SiHtml5 />, name: "HTML" }, { icon: <SiCss3 />, name: "CSS" }]}
-                    
+                    link="https://github.com/leviverleihtflugel/Internet-Speed-Test"
                     github="https://github.com/leviverleihtflugel/Internet-Speed-Test"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="Şifre Üreteci"
                     description="Güçlü ve rastgele şifreler oluşturan uygulama."
                    
                     tags={[{ icon: <SiJavascript />, name: "JavaScript" }, { icon: <SiHtml5 />, name: "HTML" }, { icon: <SiCss3 />, name: "CSS" }]}
-                    
+                    link="https://github.com/leviverleihtflugel/Password-Generator"
                     github="https://github.com/leviverleihtflugel/Password-Generator"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="PolicyGPT"
                     description="Vatandaşlık ve resmi işlemleri açıklayan LLM tabanlı chatbot."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }]}
-                    
+                    link=""
                     github="https://github.com/leviverleihtflugel/PolicyGPT"
                 />
 
-                <Project_card src=""
+                <Project_card src="/placeholder.jpg"
                     title="VoiceGPT"
                     description="Türkçe sesli asistan. Whisper + Llama3 + gTTS tabanlı."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }]}
-                    
+                    link=""
                     github="https://github.com/leviverleihtflugel/VoiceGPT"
                 />
 
