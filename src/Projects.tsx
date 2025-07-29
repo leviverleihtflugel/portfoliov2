@@ -103,7 +103,7 @@ function Projects() {
                     description="Çiftçilerle tüketicileri buluşturan rol tabanlı mobil pazar uygulaması."
                     
                     tags={[{ icon: <SiFlutter />, name: "Flutter" }, { icon: <SiDart />, name: "Dart" }, { icon: <SiMongodb />, name: "Firebase" }]}
-                    link="https://github.com/leviverleihtflugel/farmer_market"
+                    
                     github="https://github.com/leviverleihtflugel/farmer_market"
                 />
 
@@ -112,7 +112,7 @@ function Projects() {
                     description="League of Legends oyuncu istatistiklerini gösteren mobil uygulama."
                     
                     tags={[{ icon: <SiFlutter />, name: "Flutter" }, { icon: <SiDart />, name: "Dart" }, { icon: <SiRiotgames />, name: "Riot API" }]}
-                    link="https://github.com/leviSEC/riotappv2"
+                    
                     github="https://github.com/leviSEC/riotappv2"
                 />
 
@@ -121,7 +121,7 @@ function Projects() {
                     description="Llama3 destekli müşteri destek yapay zekâ asistanı."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }, { icon: <SiStreamlit />, name: "Streamlit" }]}
-                    link="https://github.com/leviverleihtflugel/customer-support-agent"
+                    
                     github="https://github.com/leviverleihtflugel/customer-support-agent"
                 />
 
@@ -130,7 +130,7 @@ function Projects() {
                     description="Veteriner kliniği için veritabanı yönetim sistemi."
                     
                     tags={[{ icon: <FaJs />, name: "JavaScript" }, { icon: <FaNodeJs />, name: "Node.js" }, { icon: <SiPostgresql />, name: "PostgreSQL" }]}
-                    link="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
+                    
                     github="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
                 />
 
@@ -139,7 +139,7 @@ function Projects() {
                     description="İnternet hızını ölçen basit web aracı."
                  
                     tags={[{ icon: <SiJavascript />, name: "JavaScript" }, { icon: <SiHtml5 />, name: "HTML" }, { icon: <SiCss3 />, name: "CSS" }]}
-                    link="https://github.com/leviverleihtflugel/Internet-Speed-Test"
+                    
                     github="https://github.com/leviverleihtflugel/Internet-Speed-Test"
                 />
 
@@ -148,7 +148,7 @@ function Projects() {
                     description="Güçlü ve rastgele şifreler oluşturan uygulama."
                    
                     tags={[{ icon: <SiJavascript />, name: "JavaScript" }, { icon: <SiHtml5 />, name: "HTML" }, { icon: <SiCss3 />, name: "CSS" }]}
-                    link="https://github.com/leviverleihtflugel/Password-Generator"
+                    
                     github="https://github.com/leviverleihtflugel/Password-Generator"
                 />
 
@@ -157,7 +157,7 @@ function Projects() {
                     description="Vatandaşlık ve resmi işlemleri açıklayan LLM tabanlı chatbot."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }]}
-                    link=""
+                    
                     github="https://github.com/leviverleihtflugel/PolicyGPT"
                 />
 
@@ -166,7 +166,7 @@ function Projects() {
                     description="Türkçe sesli asistan. Whisper + Llama3 + gTTS tabanlı."
                     
                     tags={[{ icon: <FaPython />, name: "Python" }]}
-                    link=""
+                    
                     github="https://github.com/leviverleihtflugel/VoiceGPT"
                 />
 
