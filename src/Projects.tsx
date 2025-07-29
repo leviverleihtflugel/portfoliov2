@@ -134,7 +134,7 @@ function Projects() {
                     github="https://github.com/leviverleihtflugel/DatabaseManagmentSystems-Kedi_Hastanesi"
                 />
 
-                <Project_card src="/placeholder.jpg"
+                <Project_card src="/Internet-Speed-Test.jpg"
                     title="İnternet Hız Testi"
                     description="İnternet hızını ölçen basit web aracı."
                  
